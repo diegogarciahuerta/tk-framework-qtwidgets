@@ -405,7 +405,9 @@ class BubbleEditWidget(QtGui.QTextEdit):
             return
 
 
-class _BubbleTextObject(QtGui.QPyTextObject):
+#class _BubbleTextObject(QtGui.QPyTextObject):
+class _BubbleTextObject(QtCore.QObject, QtGui.QTextObjectInterface):
+
     """
     Handles the display of bubble widgets within text documents.
     """

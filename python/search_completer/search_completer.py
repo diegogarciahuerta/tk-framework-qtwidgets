@@ -263,11 +263,11 @@ class SearchCompleter(QtGui.QCompleter):
             item = self._thumb_map[uid]["item"]
             if thumbnail:
                 thumb = QtGui.QPixmap.fromImage(thumbnail)
-                item.setIcon(create_rectangular_thumbnail(thumb))
+                item.setIcon(QtGui.QIcon(create_rectangular_thumbnail(thumb)))
             else:
                 # probably won't hit here, but just in case, use default/empty
                 # thumbnail
-                item.setIcon(self._pixmaps.no_thumbnail)
+                item.setIcon(QtGui.QIcon(self._pixmaps.no_thumbnail))
 
         if self._processing_id == uid:
             # all done!

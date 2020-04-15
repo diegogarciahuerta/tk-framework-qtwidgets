@@ -186,7 +186,7 @@ class HierarchicalSearchCompleter(SearchCompleter):
 
             item.setData(shotgun_model.sanitize_for_qt_model(data), self.SG_DATA_ROLE)
 
-            item.setIcon(self._pixmaps.no_thumbnail)
+            item.setIcon(QtGui.QIcon(self._pixmaps.no_thumbnail))
 
             data_type = data["ref"]["type"]
             data_id = data["ref"]["id"]
